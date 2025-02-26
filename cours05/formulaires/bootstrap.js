@@ -13,13 +13,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         const champMdp=document.getElementById('password');
         const champMdp2=document.getElementById('confirmPassword');
         if(champMdp.value !== champMdp2.value){
-            champMdp2.classList.remove('is-valid');
-            champMdp2.classList.add('is-invalid');
+            champMdp2.setCustomValidity("non");
+            //champMdp2.classList.remove('is-valid');
+            //champMdp2.classList.add('is-invalid');
             champMdp2.focus();
             return;
         }else{
-            champMdp2.classList.remove('is-invalid');
-            champMdp2.classList.add('is-valid');
+            champMdp2.setCustomValidity("non");
+            //champMdp2.classList.remove('is-invalid');
+            //champMdp2.classList.add('is-valid');
         }
         
         let data=new FormData(form);
